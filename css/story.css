@@ -1,0 +1,20 @@
+.card {
+    width: 80%;
+    margin-top: 80px;
+    border-radius: 80px;
+    background-color: var(--lightPink);
+    color: var(--darkPink);
+    border: none;
+}
+
+.card-body {
+    padding: 50px; 
+}
+
+
+
+@media (max-width: 700px) {
+    .card-body {
+        padding: 20px;
+    }
+}
