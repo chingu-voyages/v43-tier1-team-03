@@ -1,0 +1,40 @@
+.row {
+    justify-content: space-around;
+}
+
+.col-md-3 {
+    background-color: var(--lightPink);
+    color: #034955;
+    font-size: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 50px;
+    height: 80px;
+    max-width: 80%;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: var(--lightPink);
+    border-radius: 50%;
+    top: -5px;
+    left: -60px;
+    position: absolute;
+}
+
+.col-md-3 span {
+    padding-left: 40px;
+}
+
+@media (max-width: 750px) {
+    .col-md-3 {
+        margin-right: 0;
+    }
+}

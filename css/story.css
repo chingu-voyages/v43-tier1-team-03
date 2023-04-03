@@ -1,3 +1,15 @@
+/*INPUTS SECTION*/
+
+.inputs {
+    background-color: var(--lightPink);
+    padding: 20px 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+
+/*STORY SECTION*/
+
 .card {
     width: 80%;
     margin-top: 80px;
@@ -11,9 +23,30 @@
     padding: 50px; 
 }
 
+.card-title {
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.btn-container {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.btn-secondary {
+    background-color: var(--darkPink);
+    font-size: 32px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--blue);
+}
 
 
 @media (max-width: 700px) {
+    .card {
+        border-radius: 40px;
+    }
     .card-body {
         padding: 20px;
     }
