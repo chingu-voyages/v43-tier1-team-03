@@ -7,7 +7,14 @@
     border-radius: 20px;
 }
 
+.input-holder {
+    color: var(--text);
+    font-weight: 600;
+}
 
+.error {
+    color: red;
+}
 /*STORY SECTION*/
 
 .card {
@@ -40,6 +47,15 @@
 
 .btn-secondary:hover {
     background-color: var(--blue);
+}
+
+.switch {
+    display: none;
+}
+
+.active {
+    display: block;
+    transition: display 1s ease-in;
 }
 
 
