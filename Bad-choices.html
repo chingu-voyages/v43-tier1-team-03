@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Health category</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/story.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:wght@400;600&family=Ultra&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light text-center">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/Libzilla_logo.png" class="img-fluid" alt="Responsive logo image">
+                </a>
+            </nav>
+        </header>
+
+        <div class="container-fluid">
+            <section style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="container breadcrumb-container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="Category.html">Category</a></li>
+                    <li class="breadcrumb-item"><a href="health.html">Health</a></li>
+                    <li class="breadcrumb-item">Bad choices cause pain</li>
+                </ol>
+            </section>
+
+            <div class="switch active">
+                <section class="story-container">
+                    <form id="myform" class="d-grid gap-2">
+                        <input type="text" required aria-label="Alien Name" class="inputs"  id="alien-name-input" placeholder="Alien Name">
+                        <input type="text" required aria-label="Noun" class="inputs" id="noun1" placeholder="Noun">
+                        <input type="text" required aria-label="Noun" class="inputs" id="noun2" placeholder="Noun">
+                        <input type="text" required aria-label="Noun" class="inputs" id="noun3" placeholder="Noun">
+                        <input type="text" required aria-label="" class="inputs" id="adjective1" placeholder="Adjective">
+                        <input type="text" required aria-label="" class="inputs" id="adjective2" placeholder="Adjective">
+                        <input type="text" required aria-label="" class="inputs" id="verb1" placeholder="Verb">
+                        <input type="text" required aria-label="" class="inputs" id="verb2" placeholder="Verb">
+                    </form>
+                </section>
+
+                <section class="images-section">
+                    <img src="" class="img-fluid" alt="...">
+                    <button class="btn btn-primary" form="myform" type="submit" id="btn-submit">Create story</button>
+                    <img src="assets/Doctors.png" class="img-fluid" alt="...">
+                </section>
+
+            </div>
+            
+            <div class="switch">
+                <section class="container card">
+                    <div class="card-body">
+                      <h5 class="card-title">The Threat of the <span class="input-holder alien-name"></span></h5>
+                      <p class="card-text">In the distant future, <span class="input-holder noun-three"></span> has explored and colonized the far reaches of the galaxy. With advanced technology and knowledge, they have built thriving civilizations on countless worlds, each with their own unique cultures and histories. But with great <span class="input-holder noun-two"></span> comes great responsibility, and the galactic community faces a new threat that could bring about its downfall.</p>
+
+                      <p class="card-text">It all starts when a mysterious alien race known as the <span class="input-holder alien-name"></span> suddenly appear on the fringes of known space. Their intentions are unknown, but rumors abound that they possess incredible <span class="input-holder noun-two"></span> and technology far beyond anything <span class="input-holder noun-three"></span> has ever seen. As tensions rise, a group of <span class="input-holder adjective-one"></span> <span class="input-holder noun-one"></span> set out to uncover the truth behind the <span class="input-holder alien-name"></span> and their true intentions.</p>
+                        
+                      <p class="card-text">The <span class="input-holder adjective-one"></span> <span class="input-holder noun-one"></span>, led by a team of seasoned explorers and scientists, embark on a dangerous journey to make contact with the <span class="input-holder alien-name"></span> . Armed with advanced technology and their wits, they navigate treacherous space and overcome countless obstacles to reach the <span class="input-holder alien-name"></span> homeworld.</p>
+                        
+                      <p class="card-text">There, they discover that the <span class="input-holder alien-name"></span> are not the conquerors that many had feared, but a <span class="input-holder" id="adjective-two"></span> race seeking to establish peaceful relations with the galactic community. Together, the <span class="input-holder adjective-one"></span> <span class="input-holder noun-one"></span> and the <span class="input-holder alien-name"></span> form an alliance, using their combined knowledge and resources to <span class="input-holder" id="verb-one"> a new threat that has emerged in the galaxy - a race of rogue artificial intelligence seeking to <span class="input-holder" id="verb-two"> all life forms. Through their courage and determination, the <span class="noun-one"></span> save the galaxy from destruction and usher in a new era of peace and cooperation among the stars.</p>
+                    </div>
+                </section>
+            
+                <div class="container btn-container">
+                    <button class="btn btn-secondary" type="button" onclick="location.href='Category.html'">New Story</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center text-lg-start">
+            <p class="text-center p-4">2023 LibZilla. All Rights Reserved.</p>
+        </footer>
+        <script src="/js/index.js"></script>
+    </body>
+</html>
