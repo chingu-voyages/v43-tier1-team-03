@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:wght@400;600&family=Ultra&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body style="text-align: center;">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light text-center">
                 <a class="navbar-brand" href="index.html">
@@ -24,15 +24,16 @@
             <section style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="container breadcrumb-container">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Category</a></li>
+                    <li class="breadcrumb-item"><a href="Category.html">Category</a></li>
                     <li class="breadcrumb-item"><a href="coding.html">Coding Journey</a></li>
-                    <li class="breadcrumb-item">Java or JavaScript</li>
+                    <li class="breadcrumb-item">Journey to Coding Mastery</li>
                 </ol>
             </section>
 
             <div class="switch active">
                 <section class="story-container">
                     <form id="myform" class="d-grid gap-2">
+                        <input type="text" required aria-label="Noun" class="inputs" id="name-input" placeholder="Name">
                         <input type="text" required aria-label="Noun" class="inputs" id="noun1" placeholder="Noun">
                         <input type="text" required aria-label="Noun" class="inputs" id="noun2" placeholder="Noun">
                         <input type="text" required aria-label="Noun" class="inputs" id="noun3" placeholder="Noun">
@@ -40,29 +41,29 @@
                         <input type="text" required aria-label="" class="inputs" id="adjective2" placeholder="Adjective">
                         <input type="text" required aria-label="" class="inputs" id="verb1" placeholder="Verb">
                         <input type="text" required aria-label="" class="inputs" id="verb2" placeholder="Verb">
+                        
                     </form>
                 </section>
-
-                <section class="images-section">
-                    <img src="assets/SciFi-img1.svg" class="img-fluid" alt="...">
-                    <button class="btn btn-primary" form="myform" type="submit" id="btn-submit">Create story</button>
-                    <img src="assets/SciFi-img2.svg" class="img-fluid" alt="...">
+                <button class="btn btn-primary" form="myform" type="submit" id="btn-submit">Create story</button>
+                <section class="images-section2">
+                    
+                    <img src="assets/Developers.png" class="img-fluid" alt="...">
                 </section>
 
             </div>
             <div class="switch">
                 <section class="container card">
                     <div class="card-body">
-                      <h5 class="card-title">Java or JavaScript</h5>
-                      <p class="card-text">Once upon a time, there was a young programmer named Alice who was eager to learn how to code. She had heard that Javascript was an essential language for web development, so she decided to start learning it.</p>
+                      <h5 class="card-title"><span class="input-holder noun-three"></span> or JavaScript</h5>
+                      <p class="card-text">Once upon a time, there was a young <span class="input-holder noun-two"> named <span class="input-holder name"></span> who was <span class="input-holder" id="adjective-two"></span> to learn how to code. She had heard that Javascript was an essential <span class="input-holder noun-one"></span> for web development, so she decided to start learning it.</p>
 
-                      <p class="card-text">Alice searched for resources online and stumbled upon a tutorial on Java. She thought that Java and Javascript were the same thing, so she started following the tutorial and writing Java code.</p>
+                      <p class="card-text"><span class="input-holder name"></span> searched for resources online and stumbled upon a tutorial on <span class="input-holder noun-three"></span>. She thought that <span class="input-holder noun-three"></span> and Javascript were the same thing, so she started following the tutorial and writing <span class="input-holder noun-three"></span> code.</p>
                         
-                      <p class="card-text">After a few days of coding, Alice realized her mistake. She noticed that her code was not working correctly, and she couldn't understand why. She asked for help from a friend who was a more experienced programmer.</p>
+                      <p class="card-text">After a few days of coding, <span class="input-holder name"></span> realized her mistake. She noticed that her code was not working correctly, and she couldn't understand why. She asked for help from a friend who was a more experienced <span class="input-holder noun-two">.</p>
                         
-                      <p class="card-text">Her friend quickly realized that Alice was coding in Java instead of Javascript. They explained the difference between the two languages and helped Alice switch to learning Javascript.</p>
+                      <p class="card-text">Her friend quickly realized that <span class="input-holder name"></span> was coding in <span class="input-holder noun-three"></span> instead of Javascript. They explained the difference between the two <span class="input-holder noun-one"></span>s and helped <span class="input-holder name"></span> switch to learning Javascript.</p>
 
-                      <p class="card-text">Alice was embarrassed by her mistake, but she learned a valuable lesson. She realized that it's important to research and understand the differences between programming languages before diving into coding. From that day on, Alice made sure to double-check the language she was learning before starting any new project.</p>
+                      <p class="card-text"><span class="input-holder name"></span> was <span class="input-holder" id="adjective-one"></span> by her mistake, but she learned a valuable lesson. She realized that it's important to <span class="input-holder" id="verb-one"></span> and understand the differences between programming <span class="input-holder noun-one"></span>s before diving into coding. From that day on, <span class="input-holder name"></span> made sure to double-check the <span class="input-holder noun-one"></span> she was learning before <span class="input-holder" id="verb-two"></span> any new project.</p>
                     </div>
             </section>
             
@@ -75,6 +76,6 @@
         <footer class="text-center text-lg-start">
             <p class="text-center p-4">2023 LibZilla. All Rights Reserved.</p>
         </footer>
-        <script src="/js/SciFi2.js"></script>
+        <script src="/js/coding.js"></script>
     </body>
 </html>
