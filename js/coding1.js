@@ -47,10 +47,5 @@ btnSubmit.addEventListener('click', (e) => {
         switchState[0].classList.remove('active');
         switchState[1].classList.add('active');
     }
-    else {
-        for (let error of errors) {
-            error.innerHTML = "Field required";
-        }
-    }
 })
 
