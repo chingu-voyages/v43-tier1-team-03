@@ -99,7 +99,10 @@ header {
     align-self: flex-start;
     justify-self: center;
 }
-
+.images-section2 {
+    display: flex;
+    justify-content: flex-end;
+}
 /* FOOTER */
 footer {
     background-color: var(--blue);
