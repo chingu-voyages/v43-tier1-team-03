@@ -23,7 +23,7 @@ const btnSubmit = document.getElementById('btn-submit');
 btnSubmit.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if(alienNameInput.value != '') {
+    if(nameInput.value != '') {
         for (let name of nameHolders) {
             name.innerHTML = nameInput.value;
         }
