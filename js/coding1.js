@@ -3,7 +3,7 @@ const nameHolders = document.querySelectorAll('.name');
 const nounOneHolders = document.querySelectorAll('.noun-one');
 const nounTwoHolders = document.querySelectorAll('.noun-two');
 const nounThreeHolders = document.querySelectorAll('.noun-three');
-const adjectiveOneHolders = document.querySelectorAll('.adjective-one');
+const adjectiveOneHolder = document.getElementById('adjective-one');
 const ajectiveTwoHolder = document.getElementById('adjective-two');
 const verbOneHolder = document.getElementById('verb-one');
 const verbTwoHolder = document.getElementById('verb-two');
@@ -36,10 +36,8 @@ btnSubmit.addEventListener('click', (e) => {
         for (let nounThree of nounThreeHolders) {
             nounThree.innerHTML = nounThreeInput.value;
         }
-        for (let adjectiveOne of adjectiveOneHolders) {
-            adjectiveOne.innerHTML = adjectiveOneInput.value;
-        }
-
+        
+        ajectiveOneHolder.innerHTML = adjectiveTwoInput.value;
         ajectiveTwoHolder.innerHTML = adjectiveTwoInput.value;
         verbOneHolder.innerHTML = verbOneInput.value;
         verbTwoHolder.innerHTML = verbTwoInput.value;
