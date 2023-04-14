@@ -1,6 +1,6 @@
 const closeBtn = document.getElementById('close');
 const switchStates = document.querySelectorAll('.switch');
-const inputsEl = documents.querySelectorAll('.inputs');
+const inputsEl = document.querySelectorAll('.inputs');
 
 closeBtn.addEventListener('click', function() {
     switchStates[1].classList.remove('active');
