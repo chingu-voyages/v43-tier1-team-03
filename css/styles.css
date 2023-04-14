@@ -116,6 +116,13 @@ footer p {
     margin-bottom: 0;
 }
 
+#close {
+    text-align: right; 
+    margin: 40px; 
+    font-size: 40px;
+    cursor: pointer;
+}
+
 /* MEDIA QUERIES*/
 @media (max-width: 1200px) {
     .images-section {
