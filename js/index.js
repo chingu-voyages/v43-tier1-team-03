@@ -1,9 +1,9 @@
 const closeBtn = document.getElementById('close');
-const switchState = document.querySelectorAll('.switch');
+const switchStates = document.querySelectorAll('.switch');
 
 closeBtn.addEventListener('click', function() {
-    switchState[1].classList.remove('active');
-    switchState[0].classList.add('active');
+    switchStates[1].classList.remove('active');
+    switchStates[0].classList.add('active');
 })
 
 
