@@ -43,6 +43,7 @@ btnSubmit.addEventListener('click', (e) => {
             nounThree.innerHTML = nounThreeInput.value;
         }
         
+        
         adjectiveOneHolder.innerHTML = adjectiveOneInput.value;
         adjectiveTwoHolder.innerHTML = adjectiveTwoInput.value;
         adjectiveThreeHolder.innerHTML = adjectiveThreeInput.value;
