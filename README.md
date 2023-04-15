@@ -1,12 +1,12 @@
-# LibZilla - 
+# LibZilla - a phrasal template word game
 
 LibZilla game made by Team-03 for Tier-1 Chingu Voyage 43 
 
 ## Features
 
-- Six different categories
+- Six different categories with 2 unique stories each
 - Resizes to both mobile/desktop
-- Download story in pdf
+- Download your story in pdf
 - 
 
 ## Live
@@ -30,8 +30,12 @@ Clone the project
 ```bash
   https://github.com/chingu-voyages/v43-tier1-team-03.git
 ```
+## Dependencies
+Bootstrap:https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css
+html2canvas: https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js 
+jspdf: https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js
+Google fonts:https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:wght@400;600&family=Ultra&display=swap
 
-This project has no dependencies.
 
 <h3>Icons and Illustrations from:</h3>
 <li>Iconscout: https://iconscout.com/ </li>
