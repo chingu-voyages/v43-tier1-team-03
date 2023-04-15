@@ -31,9 +31,9 @@ Clone the project
   https://github.com/chingu-voyages/v43-tier1-team-03.git
 ```
 ## Dependencies
-Bootstrap:https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css
-html2canvas: https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js 
-jspdf: https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js
+Bootstrap:https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css <br>
+html2canvas: https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js <br>
+jspdf: https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js <br>
 Google fonts:https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:wght@400;600&family=Ultra&display=swap
 
 
