@@ -1,3 +1,5 @@
+import { jsPDF } from "jspdf";
+
 const closeBtn = document.getElementById('close');
 const switchStates = document.querySelectorAll('.switch');
 const inputsEl = document.querySelectorAll('.inputs');
@@ -18,4 +20,7 @@ $('#submit').click(function () {
     doc.save('pdf-version.pdf');
 });
 
+
+doc.text("Hello world!", 10, 10);
+doc.save("a4.pdf");
 

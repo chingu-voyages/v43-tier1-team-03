@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>How To Download a DIV in a HTML Page as PDF File Using JavaScript</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<!-- Content Area -->
+<div id="print">
+     <h3>Welcome To Veewom</h3>
+     <p>This is a Sample Pararaph</p>
+</div>
+<div id="print-btn"></div>
+<button id="submit">Download PDF File</button>
+<!-- Script -->
+ 
+<script>
+    var doc = new jsPDF();
+var specialElementHandlers = {
+    '#print-btn': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#submit').click(function () {
+    doc.fromHTML($('#print').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('pdf-version.pdf');
+});
+</script>
+
+<script src="/js/index.js"></script>
+ 
+
+</body>
+</html>
