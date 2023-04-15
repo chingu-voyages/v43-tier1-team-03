@@ -6,30 +6,39 @@
 </head>
 <body>
 <!-- Content Area -->
-<div id="print">
-     <h3>Welcome To Veewom</h3>
-     <p>This is a Sample Pararaph</p>
+<div id="editor"></div>
+<!-- first div -->
+<div id="content1" class="container text-center  my-5">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="xs-popup-content">
+				<h2 class="hidden-title">Saving this div as pdf</h2>
+				<h3 class="pdfName">First Div</h3>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center mt-2"><a href="#" class="xs-btn quote-pop-btn">Quote Now</a>  <a href="#" class="xs-btn quote-pop-btn" onclick="generatePdf(1)">Download</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<div id="print-btn"></div>
-<button id="submit">Download PDF File</button>
-<!-- Script -->
- 
-<script>
-    var doc = new jsPDF();
-var specialElementHandlers = {
-    '#print-btn': function (element, renderer) {
-        return true;
-    }
-};
+<!-- second div -->
 
-$('#submit').click(function () {
-    doc.fromHTML($('#print').html(), 15, 15, {
-        'width': 170,
-            'elementHandlers': specialElementHandlers
-    });
-    doc.save('pdf-version.pdf');
-});
-</script>
+<div id="content2" class="container text-center my-5">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="xs-popup-content">
+				<h2 class="hidden-title">Saving this div as pdf</h2>
+				<h3 class="pdfName">Second Div</h3>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center mt-2"><a href="#" class="xs-btn quote-pop-btn">Quote Now</a>  <a href="#" class="xs-btn quote-pop-btn" onclick="generatePdf(2)">Download</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <script src="/js/index.js"></script>
  

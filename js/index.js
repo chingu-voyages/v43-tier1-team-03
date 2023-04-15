@@ -12,18 +12,27 @@ closeBtn.addEventListener('click', function() {
     }
 })
 
-$('#submit').click(function () {
-    doc.fromHTML($('#print').html(), 15, 15, {
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#print-btn': function (element, renderer) {
+        return true;
+    }
+};
+
+var jsVal = '';
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+function generatePdf(jsVal){
+var doc = new jsPDF();
+
+    doc.fromHTML($('#content'+jsVal).html(), 15, 15, {
         'width': 170,
             'elementHandlers': specialElementHandlers
     });
-    doc.save('pdf-version.pdf');
-});
-
-
-const doc = new jsPDF();
-
-
-doc.text("Hello world!", 10, 10);
-doc.save("a4.pdf");
-
+    var pdfName = $('#content'+jsVal+' .pdfName').html();
+   // console.log();
+    doc.save(pdfName.replace(/ /g,"_") + '.pdf');
+}
