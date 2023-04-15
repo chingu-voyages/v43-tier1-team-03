@@ -1,14 +1,35 @@
-# voyage-tasks
+Έλεγχος
+# LibZilla - 
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+LibZilla game made by Team-03 for Tier-1 Chingu Voyage 43 
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+## Features
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+- Six different categories
+- Resizes to both mobile/desktop
+- Download story in pdf
+- 
 
-> Own it & Make it your Own!
+## Live
+
+https://libzilla.netlify.app/ 
+
+## Screenshots
+
+
+
+## Authors
+
+- [@CrazyLestat](https://github.com/CrazyLestat)
+- [@Stellabam](https://github.com/Stellabam)
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  https://github.com/chingu-voyages/v43-tier1-team-03.git
+```
+
+This project has no dependencies.
