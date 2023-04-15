@@ -1,4 +1,3 @@
-Έλεγχος
 # LibZilla - 
 
 LibZilla game made by Team-03 for Tier-1 Chingu Voyage 43 
@@ -33,3 +32,7 @@ Clone the project
 ```
 
 This project has no dependencies.
+
+<h3>Icons and Illustrations from:</h3>
+<li>Iconscout: https://iconscout.com/ </li>
+<li>Blush: https://blush.design/ </li>
