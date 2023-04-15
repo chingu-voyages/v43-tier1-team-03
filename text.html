@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>How To Download a DIV in a HTML Page as PDF File Using JavaScript</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Content Area -->
+<div id="editor"></div>
+<!-- first div -->
+<div id="content1" class="container text-center  my-5">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="xs-popup-content">
+				<h2 class="hidden-title">Saving this div as pdf</h2>
+				<h3 class="pdfName">First Div</h3>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center mt-2"><a href="#" class="xs-btn quote-pop-btn">Quote Now</a>  <a href="#" class="xs-btn quote-pop-btn" onclick="generatePdf(1)">Download</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- second div -->
+
+<div id="content2" class="container text-center my-5">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="xs-popup-content">
+				<h2 class="hidden-title">Saving this div as pdf</h2>
+				<h3 class="pdfName">Second Div</h3>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center mt-2"><a href="#" class="xs-btn quote-pop-btn">Quote Now</a>  <a href="#" class="xs-btn quote-pop-btn" onclick="generatePdf(2)">Download</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/js/index.js"></script>
+ 
+
+</body>
+</html>

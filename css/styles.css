@@ -40,6 +40,17 @@ header {
 /* BREADCRUMBS */
 .breadcrumb-container {
     padding-top: calc(5vh + 30px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.breadcrumb {
+    margin-bottom: 0 !important;
+}
+
+.info {
+    width: 40px;
 }
 
 .breadcrumb-item a {
