@@ -10,4 +10,12 @@ closeBtn.addEventListener('click', function() {
     }
 })
 
+$('#submit').click(function () {
+    doc.fromHTML($('#print').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('pdf-version.pdf');
+});
+
 
