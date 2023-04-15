@@ -14,6 +14,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:wght@400;600&family=Ultra&display=swap"
         rel="stylesheet">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+        
 </head>
 
 <body style="text-align: center;">
@@ -36,6 +41,8 @@
                 <li class="breadcrumb-item">Bad choices cause pain</li>
             </ol>
         </section>
+
+        <button id="printButton" onclick="print()">Download your story as pdf</button>
 
         <div class="switch active">
             <section class="story-container">
@@ -61,10 +68,12 @@
             </section>
 
         </div>
+
+        
         <div class="switch">
             <section class="container card">
                 <span id="close">X</span>
-                <div class="card-body">
+                <div class="card-body" id="story-card">
                     <h5 class="card-title">Bad choices cause pain</h5>
                     <p class="card-text">
                         Once upon a time, there was a <span class="input-holder" id="adjective-one"></span> girl named
@@ -116,6 +125,27 @@
     </footer>
     <script src="/js/health.js"></script>
     <script src="/js/index.js"></script>
+    
+    
+    <script>
+window.jsPDF = window.jspdf.jsPDF;
+var docPDF = new jsPDF();
+function print(){
+var elementHTML = document.querySelector("#story-card");
+docPDF.html(elementHTML, {
+ callback: function(docPDF) {
+  docPDF.save('Your new story.pdf');
+ },
+ x: 15,
+ y: 15,
+ width: 170,
+ windowWidth: 650
+});
+}
+
+
+
+    </script>
 </body>
 
 </html>
