@@ -96,7 +96,9 @@
             var docPDF = new jsPDF();
             function print(){
                 $('span').each(function() {
-                    $(this).html('___________________');
+                    if($(this).is(':empty')) {
+                        $(this).html('___________________');
+                    }
                 })
                 var elementHTML = document.querySelector("#story-card");
                 docPDF.html(elementHTML, {
