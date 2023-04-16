@@ -56,6 +56,15 @@ header {
 .breadcrumb-item a {
     color: var(--blue);
 }
+.btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--pink);
+}
+.btn-text:hover {
+    color: var(--darkPink);
+}
 
 /* MAIN SECTIONS */
 .story-container {
@@ -153,5 +162,13 @@ footer p {
 @media (max-width: 600px) {
     .img-col {
         margin: 40px 0 0 0 ;
+    }
+    .breadcrumb-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .breadcrumb {
+        justify-content: center;
     }
 }
