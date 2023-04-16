@@ -62,7 +62,7 @@ header {
     gap: 5px;
     color: var(--pink);
     border: none;
-    background-color: none;
+    background: none;
 }
 .btn-text:hover {
     color: var(--darkPink);
