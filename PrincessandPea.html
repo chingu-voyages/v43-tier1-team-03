@@ -10,7 +10,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:wght@400;600&family=Ultra&display=swap" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     </head>
 
     <body style="text-align: center;">
@@ -32,7 +33,7 @@
                 </ol>
                 <div class="extra">
                     <div id="print-btn"></div>
-                    <button id="submit">Download PDF File</button>
+                    <button id="printButton" onclick="print()">Download PDF File</button>
                     <span title="Complete the inputs with nouns, verbs, adjectives, etc. in order to get a story."><img src="/assets/Info-icon.svg" alt="info icon" class="info"></span>
                 </div>
             </section>
@@ -60,7 +61,7 @@
             <div class="switch">
                 <section class="container card">
                     <span id="close">X</span>
-                    <div class="card-body" id="print">
+                    <div class="card-body" id="story-card">
                       <h5 class="card-title">The <span class="input-holder noun-one"></span> and the <span class="input-holder noun-two"></span></h5>
                       <p class="card-text">Once upon a time, there was a beautiful <span class="input-holder noun-one"></span> who lived in a grand <span class="input-holder noun-three"></span>. She was kind and gentle, but she had trouble sleeping at night. No matter how many mattresses she <span class="input-holder" id="verb-two"></span> on her <span class="input-holder noun-four"></span>, she always felt a lump that kept her awake.</p>
 
@@ -89,5 +90,21 @@
         </footer>
         <script src="/js/fairytales2.js"></script>
         <script src="/js/index.js"></script>
+        <script>
+            window.jsPDF = window.jspdf.jsPDF;
+            var docPDF = new jsPDF();
+            function print(){
+            var elementHTML = document.querySelector("#story-card");
+            docPDF.html(elementHTML, {
+             callback: function(docPDF) {
+              docPDF.save('Your new story.pdf');
+             },
+             x: 15,
+             y: 15,
+             width: 170,
+             windowWidth: 650
+            });
+            }
+        </script>
     </body>
 </html>

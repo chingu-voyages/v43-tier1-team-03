@@ -2,45 +2,31 @@
 <html lang="en-US">
 <head>
 <title>How To Download a DIV in a HTML Page as PDF File Using JavaScript</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/domderen/pixastic-standalone/1.0.0/dist/pixastic-standalone.js">
+</script>
+
+<script src="https://cdn.rawgit.com/domderen/pixastic-crop/1.0.1/dist/pixastic-crop.js">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"> </script>
 </head>
 <body>
-<!-- Content Area -->
-<div id="editor"></div>
-<!-- first div -->
-<div id="content1" class="container text-center  my-5">
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="xs-popup-content">
-				<h2 class="hidden-title">Saving this div as pdf</h2>
-				<h3 class="pdfName">First Div</h3>
-			</div>
-			<div class="row">
-				<div class="col-lg-12 text-center mt-2"><a href="#" class="xs-btn quote-pop-btn">Quote Now</a>  <a href="#" class="xs-btn quote-pop-btn" onclick="generatePdf(1)">Download</a>
-				</div>
-			</div>
-		</div>
-	</div>
+<button id="printMe">Print</button>
+<div id="printItem" style="width:1024px;">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel ante sem. Fusce efficitur non diam quis egestas. Nam vulputate ante id odio dapibus, a cursus ipsum finibus. Mauris consequat lectus id placerat gravida. Praesent imperdiet, justo a elementum fringilla, urna augue porttitor arcu, eget congue nisi leo vel mi. Suspendisse lorem augue, molestie eu diam non, imperdiet tempor dolor. Etiam sit amet varius metus. Maecenas bibendum suscipit nibh, vitae finibus lectus semper a. Vivamus in laoreet sapien. Aliquam erat volutpat. Vivamus ut diam sed nisi tristique lacinia. In quis feugiat elit. In elementum libero sit amet accumsan varius. Ut aliquet odio sit amet convallis fermentum. Suspendisse euismod finibus posuere. Integer sodales magna sit amet metus suscipit, ac rutrum arcu dictum.</p>
+<p>Curabitur ut arcu sit amet massa tempor facilisis pulvinar at sapien. Cras leo ex, laoreet eget magna ut, sagittis fermentum sem. Cras ut lacinia mi. Nulla non commodo massa, eu aliquet quam. Pellentesque dapibus odio at ullamcorper volutpat. Mauris sollicitudin sit amet lacus et tempus. Mauris gravida metus at metus lacinia, vel pharetra risus maximus. Donec finibus, turpis at vulputate viverra, risus tortor laoreet risus, dignissim blandit massa erat vel neque. Sed et dolor ultrices, auctor est eu, aliquet augue. Curabitur in eros mauris. Suspendisse ut purus vel ligula auctor vestibulum sed tempus metus. Suspendisse velit felis, rhoncus at pretium at, varius a purus. Quisque porttitor finibus magna sed rutrum. Aliquam justo lorem, egestas eu velit in, sagittis iaculis massa. Integer varius quam tellus, quis semper tellus posuere quis.</p>
+<p>Ut nec tellus vitae eros dictum aliquet. Ut feugiat sapien et tortor imperdiet aliquam. Morbi eleifend erat eu magna facilisis dapibus. Etiam mi massa, egestas sed facilisis sed, venenatis tincidunt massa. Vestibulum vel molestie ante. Proin tempus blandit imperdiet. Curabitur bibendum congue ipsum, viverra efficitur mi faucibus vitae. Nunc velit nunc, egestas eget porttitor non, finibus eget orci. In sed suscipit tortor. Aliquam sollicitudin eros non sem eleifend, ut fringilla nisi molestie.</p>
+<p>Donec sed dictum eros. Donec dolor augue, posuere ut tortor sed, blandit elementum ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec sapien risus, sagittis eget vulputate non, ornare eu massa. Suspendisse ullamcorper rutrum sapien in tincidunt. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam aliquet augue in turpis vulputate vehicula. Sed dictum tempus porttitor. Sed ac arcu sit amet nisi pellentesque pulvinar in et risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p>Nulla ut tincidunt nulla, a facilisis nunc. Aenean vel maximus sem. Suspendisse potenti. Fusce ac condimentum dui. Etiam congue, lectus eu egestas semper, tortor ipsum tincidunt erat, ut efficitur eros ligula eget nulla. Sed eleifend dui at nunc fermentum lobortis ut ut ligula. Duis a turpis quis erat aliquam auctor et id elit. Morbi eget velit ac magna imperdiet sollicitudin eu id lectus. Quisque pretium eros eget blandit tristique. Donec faucibus sagittis sapien. Aliquam hendrerit consequat purus non luctus. Mauris vel faucibus lorem. Praesent dictum, tellus nec euismod laoreet, justo est pellentesque augue, at vehicula nulla libero cursus lorem. Praesent risus dui, fringilla nec elementum et, finibus hendrerit diam. Donec gravida eu felis eget elementum.</p>
+  
+  <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg" style="max-width: 100%;"/>
+  
 </div>
-<!-- second div -->
 
-<div id="content2" class="container text-center my-5">
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="xs-popup-content">
-				<h2 class="hidden-title">Saving this div as pdf</h2>
-				<h3 class="pdfName">Second Div</h3>
-			</div>
-			<div class="row">
-				<div class="col-lg-12 text-center mt-2"><a href="#" class="xs-btn quote-pop-btn">Quote Now</a>  <a href="#" class="xs-btn quote-pop-btn" onclick="generatePdf(2)">Download</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+
+
+
+
 
 
 <script src="/js/index.js"></script>
