@@ -37,8 +37,16 @@
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="Category.html">Category</a></li>
                 <li class="breadcrumb-item"><a href="animals.html">Animals</a></li>
-                <li class="breadcrumb-item">Kitty stuck in a tree</li>
+                <li class="breadcrumb-item" id="story-title">Kitty stuck in a tree</li>
             </ol>
+            <div class="extra">
+                <div id="print-btn"></div>
+                <button id="printButton" class="btn-text" onclick="print()">Download Story <span class="material-symbols-outlined">
+                    picture_as_pdf
+                    </span>
+                </button>
+                <span title="Complete the inputs with nouns, verbs, adjectives, etc. in order to get a story."><img src="/assets/Info-icon.svg" alt="info icon" class="info"></span>
+            </div>
         </section>
 
         <div class="switch active">
@@ -69,7 +77,7 @@
         <div class="switch">
             <section class="container card">
                 <span class="close">X</span>
-                <div class="card-body">
+                <div class="card-body" id="story-card">
                     <h5 class="card-title">Kitty stuck in a tree</h5>
                     <p class="card-text">
                         Once upon a time, there was a <span class="input-holder" id="adjective-one"></span> little cat
@@ -119,6 +127,27 @@
     </footer>
     <script src="/js/animals.js"></script>
     <script src="/js/index.js"></script>
+    <script>
+        window.jsPDF = window.jspdf.jsPDF;
+        var docPDF = new jsPDF();
+        function print(){
+            $('span').each(function() {
+                if($(this).is(':empty')) {
+                    $(this).html('___________________');
+                }
+            })
+            var elementHTML = document.querySelector("#story-card");
+            docPDF.html(elementHTML, {
+            callback: function(docPDF) {
+            docPDF.save($('#story-title').text() + '.pdf');
+            },
+            x: 15,
+            y: 15,
+            width: 170,
+            windowWidth: 650
+            });
+        }
+    </script>
 </body>
 
 </html>

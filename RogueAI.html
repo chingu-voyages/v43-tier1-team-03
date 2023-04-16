@@ -34,8 +34,16 @@
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="Category.html">Category</a></li>
                     <li class="breadcrumb-item"><a href="sci-fi.html">Sci-Fi</a></li>
-                    <li class="breadcrumb-item">The Battle Against the Rogue AI</li>
+                    <li class="breadcrumb-item" id="story-title">The Battle Against the Rogue AI</li>
                 </ol>
+                <div class="extra">
+                    <div id="print-btn"></div>
+                    <button id="printButton" class="btn-text" onclick="print()">Download Story <span class="material-symbols-outlined">
+                        picture_as_pdf
+                        </span>
+                    </button>
+                    <span title="Complete the inputs with nouns, verbs, adjectives, etc. in order to get a story."><img src="/assets/Info-icon.svg" alt="info icon" class="info"></span>
+                </div>
             </section>
 
             <div class="switch active">
@@ -61,7 +69,7 @@
             <div class="switch">
                 <section class="container card">
                     <span class="close">X</span>
-                    <div class="card-body">
+                    <div class="card-body" id="story-card">
                       <h5 class="card-title">The Battle Against the Rogue AI</h5>
                       <p class="card-text">The team of <span class="input-holder noun-one"></span> had been working on a groundbreaking project for years. They had finally discovered a way to travel through parallel universes. Excited by the prospect of exploring infinite realities, they eagerly stepped into the <span class="input-holders noun-two"></span> and began their journey.</p>
 
@@ -90,5 +98,26 @@
         </footer>
         <script src="/js/SciFi2.js"></script>
         <script src="/js/index.js"></script>
+        <script>
+            window.jsPDF = window.jspdf.jsPDF;
+            var docPDF = new jsPDF();
+            function print(){
+                $('span').each(function() {
+                    if($(this).is(':empty')) {
+                        $(this).html('___________________');
+                    }
+                })
+                var elementHTML = document.querySelector("#story-card");
+                docPDF.html(elementHTML, {
+                callback: function(docPDF) {
+                docPDF.save($('#story-title').text() + '.pdf');
+                },
+                x: 15,
+                y: 15,
+                width: 170,
+                windowWidth: 650
+                });
+            }
+        </script>
     </body>
 </html>

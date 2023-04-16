@@ -34,8 +34,16 @@
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item"><a href="Category.html">Category</a></li>
                     <li class="breadcrumb-item"><a href="sci-fi.html">Sci-Fi</a></li>
-                    <li class="breadcrumb-item">The Threat of the Xirixians</li>
+                    <li class="breadcrumb-item" id="story-title">The Threat of the Xirixians</li>
                 </ol>
+                <div class="extra">
+                    <div id="print-btn"></div>
+                    <button id="printButton" class="btn-text" onclick="print()">Download Story <span class="material-symbols-outlined">
+                        picture_as_pdf
+                        </span>
+                    </button>
+                    <span title="Complete the inputs with nouns, verbs, adjectives, etc. in order to get a story."><img src="/assets/Info-icon.svg" alt="info icon" class="info"></span>
+                </div>
             </section>
 
             <div class="switch active">
@@ -63,7 +71,7 @@
             <div class="switch">
                 <section class="container card">
                     <span class="close">X</span>
-                    <div class="card-body">
+                    <div class="card-body" id="story-card">
                       <h5 class="card-title">The Threat of the <span class="input-holder alien-name"></span></h5>
                       <p class="card-text">In the distant future, <span class="input-holder noun-three"></span> has explored and colonized the far reaches of the galaxy. With advanced technology and knowledge, they have built thriving civilizations on countless worlds, each with their own unique cultures and histories. But with great <span class="input-holder noun-two"></span> comes great responsibility, and the galactic community faces a new threat that could bring about its downfall.</p>
 
@@ -86,5 +94,26 @@
         </footer>
         <script src="/js/SciFi1.js"></script>
         <script src="/js/index.js"></script>
+        <script>
+            window.jsPDF = window.jspdf.jsPDF;
+            var docPDF = new jsPDF();
+            function print(){
+                $('span').each(function() {
+                    if($(this).is(':empty')) {
+                        $(this).html('___________________');
+                    }
+                })
+                var elementHTML = document.querySelector("#story-card");
+                docPDF.html(elementHTML, {
+                callback: function(docPDF) {
+                docPDF.save($('#story-title').text() + '.pdf');
+                },
+                x: 15,
+                y: 15,
+                width: 170,
+                windowWidth: 650
+                });
+            }
+        </script>
     </body>
 </html>
