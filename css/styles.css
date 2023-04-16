@@ -138,7 +138,7 @@ footer p {
     margin-bottom: 0;
 }
 
-#close {
+.close {
     text-align: right; 
     margin: 40px; 
     font-size: 40px;
