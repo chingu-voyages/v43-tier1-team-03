@@ -61,6 +61,8 @@ header {
     align-items: center;
     gap: 5px;
     color: var(--pink);
+    border: none;
+    background-color: none;
 }
 .btn-text:hover {
     color: var(--darkPink);
